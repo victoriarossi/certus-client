@@ -5,20 +5,20 @@ import {Item} from "@mui/material";
 
 const BoxStyle = {
     height: 600,
-    backgroundColor: '#11e3ab',
+    backgroundColor: '#f3f6f7',
     color: '#11e3ab',
     display: 'flex', overflow: 'hidden',
 };
 
-function Presentation(){
+function Presentation2(){
     return(
         <>
             <Box sx={BoxStyle}
                  component="section"
             >
                 <Grid container spacing={2}>
-                    <Grid item xs={6} sx={{color: 'white', fontFamily: 'Josefin Sans', fontSize: 65}}>
-                        {'NFTs for your products'}
+                    <Grid item xs={6} sx={{color: '#041d3d', fontFamily: 'Josefin Sans', fontSize: 65}}>
+                        {'Queda aprender a centrar algo mepa jajaj'}
                     </Grid>
                     <Grid item xs={6}>
                         <img src={require("../public/assets/undraw_mobile_encryption_re_yw3o.svg")} />
@@ -29,4 +29,4 @@ function Presentation(){
     );
 }
 
-export default Presentation;
+export default Presentation2;

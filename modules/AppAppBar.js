@@ -25,9 +25,9 @@ function AppAppBar() {
                            underline="none"
                         color="inherit"
                         href="/"
-                        sx={{ fontSize: 24 }}
+                        sx={{ fontSize: 65, fontFamily: 'Josefin Sans'}}
                     >
-                        {'CERTUS'}
+                        {'certus'}
                     </Link>
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         <Link
