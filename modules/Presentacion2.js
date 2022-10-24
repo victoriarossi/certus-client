@@ -21,7 +21,7 @@ function Presentation2(){
                         {'Queda aprender a centrar algo mepa jajaj'}
                     </Grid>
                     <Grid item xs={6}>
-                        <img src={require("../public/assets/undraw_mobile_encryption_re_yw3o.svg")} />
+                        <img src="/assets/undraw_mobile_encryption_re_yw3o.svg" />
                     </Grid>
                 </Grid>
             </Box>
