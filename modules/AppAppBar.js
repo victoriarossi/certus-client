@@ -3,6 +3,7 @@ import AppBar from '@mui/material/AppBar'
 import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Toolbar from './components/Toolbar';
+import Button from '@mui/material/Button';
 
 const rightLink = {
     fontSize: 16,
@@ -27,17 +28,17 @@ function AppAppBar() {
                         href="/"
                         sx={{ fontSize: 65, fontFamily: 'Josefin Sans'}}
                     >
-                        {'certus'}
+                        <img src="/assets/4.png" style={{height: 80, marginTop: 30}} alt="Certus Logo"/>
                     </Link>
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
                         <Link
                             color="inherit"
                             variant="h6"
                             underline="none"
-                            href="/premium-themes/onepirate/sign-in/"
+                            href="https://certus.vercel.app/"
                             sx={rightLink}
                         >
-                            {'Sign In'}
+                            <Button variant="contained">Try it out</Button>
                         </Link>
                         <Link
                             variant="h6"
@@ -45,7 +46,7 @@ function AppAppBar() {
                             href="/premium-themes/onepirate/sign-up/"
                             sx={{ ...rightLink, color: 'secondary.main' }}
                         >
-                            {'Sign Up'}
+                            <Button variant="outlined" sx={{outlineColor: 'white'}}>Contact Us</Button>
                         </Link>
                     </Box>
                 </Toolbar>
