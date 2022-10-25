@@ -2,6 +2,7 @@ import Box from '@mui/material/Box'
 import * as mui from '@mui/material'
 import {Grid} from "@mui/material";
 import {Item} from "@mui/material";
+import Button from "@mui/material/Button";
 
 const BoxStyle = {
     height: 600,
@@ -17,11 +18,11 @@ function Presentation2(){
                  component="section"
             >
                 <Grid container spacing={2}>
-                    <Grid item xs={6} sx={{color: '#041d3d', fontFamily: 'Josefin Sans', fontSize: 65}}>
-                        {'Queda aprender a centrar algo mepa jajaj'}
+                    <Grid item xs={6} sx={{color: '#041d3d', fontFamily: 'Josefin Sans', fontSize: 65, marginLeft: 15, marginTop: 30}}>
+                        {'Demo our product now'}
                     </Grid>
-                    <Grid item xs={6}>
-                        <img src="/assets/undraw_mobile_encryption_re_yw3o.svg" />
+                    <Grid item xs={3} sx={{marginLeft: 25, marginTop: 30}}>
+                        <Button size="large" variant={"contained"} color={"success"}>Try It Out</Button>
                     </Grid>
                 </Grid>
             </Box>

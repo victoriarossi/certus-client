@@ -26,11 +26,11 @@ function AppAppBar() {
                            underline="none"
                         color="inherit"
                         href="/"
-                        sx={{ fontSize: 65, fontFamily: 'Josefin Sans'}}
+                        sx={{ fontSize: 65, fontFamily: 'Josefin Sans', fontWeight: '900'  }}
                     >
                         <img src="/assets/4.png" style={{height: 80, marginTop: 30}} alt="Certus Logo"/>
                     </Link>
-                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end' }}>
+                    <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end'}}>
                         <Link
                             color="inherit"
                             variant="h6"
@@ -38,7 +38,7 @@ function AppAppBar() {
                             href="https://certus.vercel.app/"
                             sx={rightLink}
                         >
-                            <Button variant="contained">Try it out</Button>
+                            <Button variant="text" sx={{color: 'white'}} >Try it out</Button>
                         </Link>
                         <Link
                             variant="h6"
@@ -46,7 +46,7 @@ function AppAppBar() {
                             href="/premium-themes/onepirate/sign-up/"
                             sx={{ ...rightLink, color: 'secondary.main' }}
                         >
-                            <Button variant="outlined" sx={{outlineColor: 'white'}}>Contact Us</Button>
+                            <Button variant="text" sx={{color: 'white'}} color="success">Contact Us</Button>
                         </Link>
                     </Box>
                 </Toolbar>
