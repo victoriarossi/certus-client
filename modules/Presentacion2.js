@@ -22,7 +22,7 @@ function Presentation2(){
                         {'Demo our product now'}
                     </Grid>
                     <Grid item xs={3} sx={{marginLeft: 25, marginTop: 30}}>
-                        <Button size="large" variant={"contained"} color={"success"}>Try It Out</Button>
+                        <Button size="large" variant={"contained"} color={"success"} href="https://certus.vercel.app/">Try It Out</Button>
                     </Grid>
                 </Grid>
             </Box>
