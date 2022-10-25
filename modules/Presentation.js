@@ -25,7 +25,7 @@ function Presentation(){
                  component="section"
             >
 
-                    <Typography variant="h3"  sx={{color:'#f3f6f7', fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 130}}
+                    <Typography variant="h3"  sx={{color:'#f3f6f7', fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 100}}
                         align="center" marked="center"
                     >
                         NFTs For Your Products
@@ -35,7 +35,7 @@ function Presentation(){
             <Box sx={BoxStyle2}
                  component="section"
             >
-                <Typography variant="h2"  sx={{color:'#f3f6f7', fontFamily: 'Josefin Sans', marginTop: 0, marginLeft: 'auto', marginRight: 'auto', fontSize: 60}}
+                <Typography variant="h2"  sx={{color:'#f3f6f7', fontFamily: 'Josefin Sans', marginTop: 0, marginLeft: 'auto', marginRight: 'auto', fontSize: 50}}
                             align="center" marked="center"
                 >
                     Blockchain backed authentication for goods and services.
