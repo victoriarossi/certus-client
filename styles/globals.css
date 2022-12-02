@@ -29,3 +29,23 @@ a {
 .AppAppBar{
   background-color: #111111;
 }
+
+.colorfont1{
+  color: #041D3D
+}
+
+.font {
+  font-family: "Josefin Sans Regular", "Roboto", monospace;
+}
+
+.description-login {
+  font-size: 250%;
+}
+
+.text-login {
+  font-size: 100%;
+}
+
+.center-text{
+  text-align: center;
+}
