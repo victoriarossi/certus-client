@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Link from '@mui/material/Link';
 import Toolbar from './components/Toolbar';
 import Button from '@mui/material/Button';
+import {useRouter} from "next/router";
 
 const rightLink = {
     fontSize: 16,
@@ -16,6 +17,7 @@ const AppAppBarStyle = {
 };
 
 function AppAppBar() {
+    const router = useRouter();
     return (
         <div>
             <AppBar position="fixed" sx={AppAppBarStyle} elevation={0}>
@@ -31,23 +33,11 @@ function AppAppBar() {
                         <img src="/assets/4.png" style={{height: 80, marginTop: 30}} alt="Certus Logo"/>
                     </Link>
                     <Box sx={{ flex: 1, display: 'flex', justifyContent: 'flex-end'}}>
-                        <Link
-                            color="inherit"
-                            variant="h6"
-                            underline="none"
-                            href="https://certus.vercel.app/"
-                            sx={rightLink}
-                        >
-                            <Button variant="text" sx={{color: 'white'}} >Try it out</Button>
-                        </Link>
-                        <Link
-                            variant="h6"
-                            underline="none"
-                            href="/premium-themes/onepirate/sign-up/"
-                            sx={{ ...rightLink, color: 'secondary.main' }}
-                        >
-                            <Button variant="text" sx={{color: 'white'}} color="success">Contact Us</Button>
-                        </Link>
+
+                        <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/LogIn")} >Log In</Button>
+
+                        <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/ContactUs")}>Contact Us</Button>
+
                     </Box>
                 </Toolbar>
             </AppBar>

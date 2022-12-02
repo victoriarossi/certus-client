@@ -18,8 +18,7 @@ import mintNft from "./mintNft";
 export default function Home() {
   return (
       <>
-          {/*<Landing></Landing>*/}
-          <LogIn></LogIn>
+          <Landing></Landing>
       </>
   )
 }

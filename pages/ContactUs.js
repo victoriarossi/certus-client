@@ -1,24 +1,15 @@
 import Head from "next/head";
-import AppAppBar from "./AppAppBar";
-import { styled } from '@mui/material/styles';
-import * as React from "react";
-import Box from "@mui/material/Box";
-import Paper from '@mui/material/Paper';
+import AppAppBar from "../modules/AppAppBar";
 import {Grid, TextField} from "@mui/material";
+import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
+import * as React from "react";
 
-function GridItem(theme){
-    return(
-        <>
 
-        </>
-    )
-}
-
-function _LogIn(){
+function ContactUs(){
     return (
         <>
-            <Head><title>Certus - Log In</title></Head>
+            <Head><title>Certus - Contact Us</title></Head>
             <AppAppBar class={AppAppBar}></AppAppBar>
             <Grid
                 position="fixed"
@@ -36,7 +27,7 @@ function _LogIn(){
             >
 
                 <div className="description-login font colorfont1 center-text" style={{color: '#D9FCF3', marginBottom: 50}}>
-                    LOG IN
+                    CONTACT US
                 </div>
                 <Box
                     sx={{
@@ -62,20 +53,16 @@ function _LogIn(){
                             contairner
                         >
                             <Grid item xs={12}>
-                                <TextField fullWidth label="user" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
+                                <TextField fullWidth label="Business Name" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
                             </Grid>
                             <Grid item xs={12}>
-                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"/>
+                                <TextField fullWidth label="Business Field" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
                             </Grid>
+
                             <Grid item xs={12}>
-                                {/*<Button variant="outlined" style={, justifySelf: "center"}}>Log In</Button>*/}
-                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}} variant="contained" >Log In</Button>
+                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}} variant="contained" >Contact Us</Button>
                             </Grid>
-                            <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    Not have an account? Sign Up now
-                                </div>
-                            </Grid>
+
                         </Grid>
                     </div>
                 </Box>
@@ -84,4 +71,4 @@ function _LogIn(){
     )
 }
 
-export default _LogIn;
+export default ContactUs;
