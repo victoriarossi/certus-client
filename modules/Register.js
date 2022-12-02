@@ -7,15 +7,8 @@ import Paper from '@mui/material/Paper';
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 
-function GridItem(theme){
-    return(
-        <>
 
-        </>
-    )
-}
-
-function LogIn(){
+function Register(){
     return (
         <>
             <Head><title>Certus - Log In</title></Head>
@@ -84,4 +77,4 @@ function LogIn(){
     )
 }
 
-export default LogIn;
+export default Register;

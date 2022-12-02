@@ -12,7 +12,7 @@ import Box from "@mui/material/Box";
 //import Button from "@mui/material/Button";
 import Link from "@mui/material/Link";
 import Button from "@mui/material/Button";
-
+import mintNft from "./mintNft";
 
 
 export default function Home() {
