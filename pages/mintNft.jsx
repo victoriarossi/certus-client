@@ -15,13 +15,18 @@ export default function mintNft() {
         <>
             <Head><title>Certus - Mint Nft</title></Head>
             <DashboardAppBar class={AppAppBar}></DashboardAppBar>
-            <Box
+            <Grid
                 position="fixed"
+                container
+                spacing={0}
+                direction="column"
+                alignItems="center"
+                justifyContent="center"
                 sx={{
                     marginTop: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#11e3ab',
+                    backgroundColor: 'white',
                 }}
             >
                 <Box
@@ -40,7 +45,7 @@ export default function mintNft() {
                             display: 'flex',
                             justifyContent: 'center',
                             alignItems: 'center',
-                            height: '100%'
+                            height: '100%',
                         }}
                     >
                         <Grid spacing={2} >
@@ -66,7 +71,7 @@ export default function mintNft() {
                     </div>
                 </Box>
 
-            </Box>
+            </Grid>
 
         </>
     )
