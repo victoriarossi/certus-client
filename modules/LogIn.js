@@ -6,6 +6,9 @@ import Box from "@mui/material/Box";
 import Paper from '@mui/material/Paper';
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
+import {useRouter} from "next/router";
+
+
 
 function GridItem(theme){
     return(
@@ -16,6 +19,7 @@ function GridItem(theme){
 }
 
 function _LogIn(){
+    const router = useRouter();
     return (
         <>
             <Head><title>Certus - Log In</title></Head>
@@ -69,7 +73,13 @@ function _LogIn(){
                             </Grid>
                             <Grid item xs={12}>
                                 {/*<Button variant="outlined" style={, justifySelf: "center"}}>Log In</Button>*/}
-                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}} variant="contained" >Log In</Button>
+                                <Button
+                                    style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}}
+                                    variant="contained"
+                                    onClick={() => router.push("/Dashboard")}
+                                >
+                                    Log In
+                                </Button>
                             </Grid>
                             <Grid item xs={12}>
                                 <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
