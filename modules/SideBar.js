@@ -4,8 +4,7 @@ import {Grid, Stack} from "@mui/material";
 function Option(){
     return (
         <>
-
-                <div
+                <Box
                     style={{
                         width: '100%',
                         height: '200',
@@ -14,8 +13,9 @@ function Option(){
                         alignItems: 'center',
                         backgroundColor: '#D9FCF3',
                     }}
-                ></div>
-
+                >
+                    Hlaadadaddddddddddddd
+                </Box>
         </>
     )
 }
@@ -32,7 +32,9 @@ export default function SideBar(){
                 justifyContent="center"
                 sx={{
                     marginTop: 0,
+                    marginLeft: 0,
                     height: '100%',
+                    width: 200,
                     backgroundColor: '#11e3ab',
                 }}
             >

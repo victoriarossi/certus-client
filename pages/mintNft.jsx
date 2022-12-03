@@ -6,6 +6,7 @@ import Box from "@mui/material/Box";
 import {Grid} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
+import DashboardAppBar from "../modules/DashboardAppBar";
 
 
 
@@ -13,7 +14,7 @@ export default function mintNft() {
     return (
         <>
             <Head><title>Certus - Mint Nft</title></Head>
-            <AppAppBar class={AppAppBar}></AppAppBar>
+            <DashboardAppBar class={AppAppBar}></DashboardAppBar>
             <Box
                 position="fixed"
                 sx={{

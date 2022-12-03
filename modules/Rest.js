@@ -31,7 +31,9 @@ export default function Rest(){
                 justifyContent="center"
                 sx={{
                     marginTop: 0,
+                    marginRight: 0,
                     height: '100%',
+                    
                     backgroundColor: '#D9FCF3',
                 }}
             >

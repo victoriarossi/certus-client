@@ -6,38 +6,15 @@ import {Grid, Stack} from "@mui/material";
 import Landing from "../modules/Landing";
 import ContactUs from "./ContactUs";
 import Rest from "../modules/Rest";
+import DashboardAppBar from "../modules/DashboardAppBar";
 
 
 export default function Dashboard(){
     return(
         <>
             <Head><title>Certus - Dashboard</title></Head>
-            {/*<AppAppBar></AppAppBar>*/}
-
-            <Grid
-                container
-                spacing={0}
-            >
-
-                <Grid item xs={2}>
-                    <SideBar></SideBar>
-                </Grid>
-
-                <Grid item xs={10}>
-                    <Rest></Rest>
-                </Grid>
-            </Grid>
-
-            {/*<Stack*/}
-            {/*    direction="row"*/}
-            {/*    spacing={0}*/}
-            {/*    justifyContent="center"*/}
-            {/*    alignItems="stretch"*/}
-            {/*>*/}
-            {/*    <SideBar></SideBar>*/}
-            {/*    <Rest></Rest>*/}
-            {/*</Stack>*/}
-
+            <DashboardAppBar></DashboardAppBar>
+            <Rest></Rest>
         </>
     )
 }
