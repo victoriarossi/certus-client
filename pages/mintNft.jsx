@@ -10,6 +10,7 @@ import DashboardAppBar from "../modules/DashboardAppBar";
 import ImageUpload from "../modules/components/ImageUpload";
 import {useState} from "react";
 import {callApi} from "./api/api.js"
+import {btoa} from "next/dist/compiled/@edge-runtime/primitives/encoding";
 
 class mintNft extends React.Component{
     constructor(props) {
@@ -18,10 +19,45 @@ class mintNft extends React.Component{
             name: String,
             desc: String,
             backgroundImages: [],
-            flavourImages: []
+            flavourImages: [],
+            base64Data: null
         }
-    }
+    };
 
+    _handleReaderLoaded = (e) => {
+        console.log('file uploaded 2: ', e);
+        let binaryString = e.target.result;
+        this.setState({
+            base64Data: btoa(binaryString),
+        });
+    };
+
+    onChangeBase64 = (e) => {
+
+        let file = e.target.files[0];
+
+        if (file) {
+            const reader = new FileReader();
+            reader.onload = this._handleReaderLoaded.bind(this);
+            reader.readAsBinaryString(file);
+        }
+    };
+
+    backgroundDelay = () => {
+        console.log(this.state.base64Data)
+        this.setState({
+            backgroundImages: [...this.state.backgroundImages,  this.state.base64Data]
+
+        })
+    };
+
+    flavourDelay = () => {
+        console.log(this.state.base64Data)
+        this.setState({
+            flavourImages: [...this.state.flavourImages,  this.state.base64Data]
+
+        })
+    };
 
     render() {
         return (
@@ -115,13 +151,14 @@ class mintNft extends React.Component{
                                         {
                                             this.state.backgroundImages.map((item) =>
                                                 (
-                                                    <ImageListItem key={item.img}>
-                                                        <img
-                                                            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                                                            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                                            alt={item.title}
-                                                            loading="lazy"
-                                                        />
+                                                    <ImageListItem key={item}>
+                                                        {/*<img*/}
+                                                        {/*    src={`${item.base64}?w=164&h=164&fit=crop&auto=format`}*/}
+                                                        {/*    srcSet={`${item.base64}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}*/}
+                                                        {/*    alt={item.title}*/}
+                                                        {/*    loading="lazy"*/}
+                                                        {/*/>*/}
+                                                        <img src={`data:image;base64,${item}`} />
                                                     </ImageListItem>
                                                 )
                                             )
@@ -136,12 +173,12 @@ class mintNft extends React.Component{
                                         id="file"
                                         accept=".jpg, .jpeg, .png"
                                         // onChange={(e) => handler(e.target.value)}
-                                        onChange ={(e) =>
-                                            this.setState({
-                                                // backgroundImages: this.state.backgroundImages.push(e.target.value)
-                                                backgroundImages: [...this.state.backgroundImages, e.target.value]
-                                            })
-                                        }
+                                        onChange ={(e) => {
+
+                                            this.onChangeBase64(e);
+
+                                            setTimeout(this.backgroundDelay, 1000)
+                                        }}
                                         style={{
                                             backgroundColor: '#11e3ab',
                                             color: 'black',
@@ -155,14 +192,15 @@ class mintNft extends React.Component{
                                         {
                                             this.state.flavourImages.map((item) =>
                                                 (
-                                                    <ImageListItem key={item.img}>
-                                                        <img
-                                                            // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                                                            src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-                                                            srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-                                                            alt={item.title}
-                                                            loading="lazy"
-                                                        />
+                                                    <ImageListItem key={item}>
+                                                        {/*<img*/}
+                                                        {/*    // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
+                                                        {/*    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
+                                                        {/*    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}*/}
+                                                        {/*    alt={item.title}*/}
+                                                        {/*    loading="lazy"*/}
+                                                        {/*/>*/}
+                                                        <img src={`data:image;base64,${item}`} />
                                                     </ImageListItem>
                                                 )
                                             )
@@ -177,12 +215,12 @@ class mintNft extends React.Component{
                                         id="file"
                                         accept=".jpg, .jpeg, .png"
                                         // onChange={(e) => handler(e.target.value)}
-                                        onChange ={(e) =>
-                                            this.setState({
-                                                // flavourImages: this.state.flavourImages.push(e.target.value)
-                                                flavourImages: [...this.state.flavourImages, e.target.value]
-                                            })
-                                        }
+                                        onChange ={(e) => {
+
+                                            this.onChangeBase64(e);
+
+                                            setTimeout(this.flavourDelay, 1000)
+                                        }}
                                         style={{
                                             backgroundColor: '#11e3ab',
                                             color: 'black',
