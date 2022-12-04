@@ -36,20 +36,18 @@ function _LogIn(){
 
     const loginHandler = async () => {
         const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
-            mode: 'no-cors',
             method: "post",
-            headers: {
-                "Content-Type": "application/json"
-            },
+            headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(
-                {
-                    "email":"lautihernando6@gmail.com",
-                    "password":"LautaroHernando1"
+            {
+                    email:"lautihernando6@gmail.com",
+                    password:"laucha"
                 }
             )
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
-        }).then((response) => console.log("response dentro del .then" + response)).catch((err) => console.log("error msg:" + err.message))
-        console.log("res: " + res)
+        }).then(async (response) => console.log("response dentro del .then" + await response)).catch(async (err) => console.log("error msg:" + await err.message))
+        console.log("res: " + await res)
+        router.push("/Dashboard")
     }
 
     return (
