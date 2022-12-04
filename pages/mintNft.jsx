@@ -8,10 +8,25 @@ import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DashboardAppBar from "../modules/DashboardAppBar";
 import ImageUpload from "../modules/components/ImageUpload";
+import {useState} from "react";
+import {callApi} from "./api/api.js"
 
 
 
 export default function mintNft() {
+
+    const [name, setName] = useState('');
+    const [desc, setDesc]= useState('');
+
+    const handleNameChange = event => {
+        setName(event.target.value);
+    }
+
+    const handleDescChange = event => {
+        setDesc(event.target.value);
+    }
+
+
     return (
         <>
             <Head><title>Certus - Mint Nft</title></Head>
@@ -55,11 +70,11 @@ export default function mintNft() {
                             </Grid>
                             <Grid item xs={12}>
                                 <h4 style={{color:'black'}}>Name</h4>
-                                <TextField id="name" variant="outlined" />
+                                <TextField id="name" variant="outlined" onChange={handleNameChange} value={name}/>
                             </Grid>
                             <Grid item xs={12}>
                                 <h4 style={{color:'black'}}>Description</h4>
-                                <TextField id="description" variant="outlined" multiline rows={4} />
+                                <TextField id="description" variant="outlined" multiline rows={4} onChange={handleDescChange} value={desc} />
                             </Grid>
                             {/*<div>*/}
                             {/*    <h4></h4>*/}
@@ -115,9 +130,16 @@ export default function mintNft() {
                                 {/*<Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>*/}
                                 <ImageUpload></ImageUpload>
                             </Grid>
+
+                            <Grid item xs={12}>
+                                <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={callApi}
+                                >Mint Nft
+                                </Button>
+                            </Grid>
                         </Grid>
                     </div>
                 </Box>
+
             </Grid>
 
         </>
