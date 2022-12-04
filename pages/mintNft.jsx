@@ -7,7 +7,6 @@ import {Grid, ImageList, ImageListItem} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DashboardAppBar from "../modules/DashboardAppBar";
-import ImageUpload from "../modules/components/ImageUpload";
 import {useState} from "react";
 import {callApi} from "./api/api.js"
 import {btoa} from "next/dist/compiled/@edge-runtime/primitives/encoding";
