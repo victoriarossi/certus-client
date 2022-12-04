@@ -7,6 +7,7 @@ import {Grid} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DashboardAppBar from "../modules/DashboardAppBar";
+import ImageUpload from "../modules/components/ImageUpload";
 
 
 
@@ -101,7 +102,8 @@ export default function mintNft() {
                             </Grid>
 
                             <Grid item xs={12}>
-                                <Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>
+                                {/*<Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>*/}
+                                <ImageUpload></ImageUpload>
                             </Grid>
 
                             <Grid item xs={12}>
@@ -110,7 +112,8 @@ export default function mintNft() {
                             </Grid>
 
                             <Grid item xs={12}>
-                                <Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>
+                                {/*<Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>*/}
+                                <ImageUpload></ImageUpload>
                             </Grid>
                         </Grid>
                     </div>
