@@ -13,7 +13,7 @@ export default function CollectionNft(){
     //let provider = window.ethereum;
     let selectedAccount;
 
-    const [account, setAccount] = useState("");
+    const [account, setAccount,to] = useState("");
     const web3 = new Web3(Web3.givenProvider || "http://localhost:8080");
   async function loadBlockChain() {
     ethereum
@@ -35,40 +35,38 @@ export default function CollectionNft(){
 async function loadContract(){
 
     let address = "0x20C0398C33dc3EC68fdAE6cFa4F38edA275532b0";
-    let chainlinkFutureContractABI = [ {
-        "anonymous": false,
+    let chainlinkFutureContractABI = [{
         "inputs": [
           {
-            "indexed": true,
             "internalType": "address",
             "name": "from",
             "type": "address"
           },
           {
-            "indexed": true,
             "internalType": "address",
             "name": "to",
             "type": "address"
           },
           {
-            "indexed": true,
             "internalType": "uint256",
             "name": "tokenId",
             "type": "uint256"
           }
         ],
-        "name": "Transfer",
-        "type": "event"
+        "name": "transferFrom",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
       }];
     
 
       var myContractInstance = new web3.eth.Contract(chainlinkFutureContractABI, address);
-      myContractInstance.Transfer(account,"a",10)
+      myContractInstance.methods.transferFrom(account,"0xD9429F1567355B5532B0F2051b2e565eA4cB302b",185)
          .send({
                  from: account, 
                  gas: 0x00, 
                  gasPrice: 0x00
-              }).then(receipt=> {consol.log(receipt)});
+        }).then(receipt=> {console.log(receipt)});
         }
 
 
@@ -119,7 +117,7 @@ async function loadContract(){
                             contairner
                         >
                             <Grid item xs={12}>
-                                <TextField fullWidth label="Wallet" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
+                                <TextField fullWidth label="Wallet" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor" />
                             </Grid>
 
                             <Grid item xs={12}>
