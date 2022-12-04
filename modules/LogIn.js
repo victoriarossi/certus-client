@@ -47,7 +47,6 @@ function _LogIn(){
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
         }).then(async (response) => console.log("response dentro del .then" + await response)).catch(async (err) => console.log("error msg:" + await err.message))
         console.log("res: " + await res)
-        router.push("/Dashboard")
     }
 
     return (
