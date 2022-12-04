@@ -17,7 +17,7 @@ const AppAppBarStyle = {
     backgroundColor: '#11e3ab',
 };
 
-export default function DashboardAppBar(){
+export default function DashboardAppBar(selected){
     const router = useRouter();
     return(
         <div>
@@ -39,7 +39,7 @@ export default function DashboardAppBar(){
 
                         <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/CollectionNft")}>NFT Collections</Button>
 
-                        <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/Profile")}>Profile</Button>
+                        <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/")}>Log Out</Button>
 
                     </Box>
                 </Toolbar>

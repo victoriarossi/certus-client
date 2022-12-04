@@ -19,7 +19,7 @@ export default function mintNft() {
                 position="fixed"
                 container
                 spacing={0}
-                direction="column"
+                direction="row"
                 alignItems="center"
                 justifyContent="center"
                 sx={{
@@ -32,11 +32,9 @@ export default function mintNft() {
                 <Box
                     sx={{
                         marginTop: '100',
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
+                        marginLeft: 0,
                         marginBottom:'100',
-                        width:500,
-                        borderRadius: 10,
+                        height: "100%",
                         backgroundColor: '#D9FCF3',
                     }}
                 >
@@ -46,11 +44,13 @@ export default function mintNft() {
                             justifyContent: 'center',
                             alignItems: 'center',
                             height: '100%',
+                            marginLeft: 60,
+                            marginRight: 60
                         }}
                     >
                         <Grid spacing={2} >
                             <Grid item xs={12} color="black">
-                                <h2>Mint Nft</h2>
+                                <h2>NFT Information</h2>
                             </Grid>
                             <Grid item xs={12}>
                                 <h4 style={{color:'black'}}>Name</h4>
@@ -64,13 +64,57 @@ export default function mintNft() {
                             {/*    <h4></h4>*/}
                             {/*    <TextField id="outlined-basic" label="Outlined" variant="outlined" />*/}
                             {/*</div>*/}
+                            {/*<Grid item xs={12}>*/}
+                            {/*    <Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Mint NFT</Button>*/}
+                            {/*</Grid>*/}
+                        </Grid>
+                    </div>
+                </Box>
+                <Box
+                    sx={{
+                        marginTop: '100',
+                        marginLeft: 'auto',
+                        marginRight: 'auto',
+                        marginBottom:'100',
+                        width: 500,
+                        borderRadius: 10,
+                        backgroundColor: 'white',
+                    }}
+                >
+                    <div
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'center',
+                            alignItems: 'center',
+                            height: '100%',
+                        }}
+                    >
+                        <Grid spacing={2} >
+
+                            <Grid item xs={12} color="black">
+                                <h2>NFT personalisation</h2>
+                            </Grid>
+
                             <Grid item xs={12}>
-                                <Button style={{backgroundColor:'#11e3ab'}} variant="contained" >Mint NFT</Button>
+                                <h4 style={{color:'black'}}>Background Images</h4>
+                                <TextField id="name" variant="outlined" />
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <h4 style={{color:'black'}}>Flavour Images</h4>
+                                <TextField id="description" variant="outlined" multiline rows={4} />
+                            </Grid>
+
+                            <Grid item xs={12}>
+                                <Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>
                             </Grid>
                         </Grid>
                     </div>
                 </Box>
-
             </Grid>
 
         </>
