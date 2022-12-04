@@ -45,7 +45,10 @@ function _LogIn(){
                 }
             )
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
-        }).then(async (response) => console.log("response dentro del .then" + await response)).catch(async (err) => console.log("error msg:" + await err.message))
+        }).then(async (response) => {
+            console.log("response dentro del .then " + await response);
+            router.push("./Dashboard");
+        }).catch(async (err) => console.log("error msg:" + await err.message))
         console.log("res: " + await res)
     }
 
@@ -92,7 +95,7 @@ function _LogIn(){
                     >
 
                         <Grid
-                            contairner
+                            container
                         >
                             <Grid item xs={12}>
                                 <TextField fullWidth label="user" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>

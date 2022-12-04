@@ -1,18 +1,17 @@
 import Head from "next/head";
-import AppAppBar from "./AppAppBar";
-import { styled } from '@mui/material/styles';
+import DashboardAppBar from "../modules/DashboardAppBar";
+import Rest from "../modules/Rest";
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Paper from '@mui/material/Paper';
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 
 
-function Register(){
+export default function TransferNft(){
     return (
         <>
-            <Head><title>Certus - Log In</title></Head>
-            <AppAppBar class={AppAppBar}></AppAppBar>
+            <Head><title>Certus - Transfer NFT</title></Head>
+            <DashboardAppBar></DashboardAppBar>
             <Grid
                 position="fixed"
                 container
@@ -24,12 +23,12 @@ function Register(){
                     marginTop: 0,
                     width: '100%',
                     height: '100%',
-                    backgroundColor: '#11e3ab',
+                    backgroundColor: '#D9FCF3',
                 }}
             >
 
-                <div className="description-login font colorfont1 center-text" style={{color: '#D9FCF3', marginBottom: 50}}>
-                    LOG IN
+                <div className="description-login font colorfont1 center-text" style={{color: '#11e3ab', marginBottom: 50}}>
+                    Transfer NFT
                 </div>
                 <Box
                     sx={{
@@ -38,7 +37,7 @@ function Register(){
                         width: 500,
                         padding: 5,
                         borderRadius: 10,
-                        backgroundColor: '#D9FCF3',
+                        backgroundColor: '#11e3ab',
                     }}
                 >
 
@@ -55,20 +54,13 @@ function Register(){
                             container
                         >
                             <Grid item xs={12}>
-                                <TextField fullWidth label="user" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
+                                <TextField fullWidth label="Wallet" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
                             </Grid>
+
                             <Grid item xs={12}>
-                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"/>
+                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#D9FCF3', color: '#11e3ab'}} variant="contained">Transfer</Button>
                             </Grid>
-                            <Grid item xs={12}>
-                                {/*<Button variant="outlined" style={, justifySelf: "center"}}>Log In</Button>*/}
-                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}} variant="contained" >Log In</Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    Not have an account? Sign Up now
-                                </div>
-                            </Grid>
+
                         </Grid>
                     </div>
                 </Box>
@@ -76,5 +68,3 @@ function Register(){
         </>
     )
 }
-
-export default Register;

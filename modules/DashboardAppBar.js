@@ -39,6 +39,8 @@ export default function DashboardAppBar(selected){
 
                         <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/CollectionNft")}>NFT Collections</Button>
 
+                        <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/TransferNft")}>Transfer NFT</Button>
+
                         <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/")}>Log Out</Button>
 
                     </Box>

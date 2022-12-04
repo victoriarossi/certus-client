@@ -1,13 +1,13 @@
 import Head from "next/head";
 import DashboardAppBar from "../modules/DashboardAppBar";
-import Rest from "../modules/Rest";
-import * as React from "react";
-import Box from "@mui/material/Box";
-import {Grid, TextField} from "@mui/material";
-import Button from "@mui/material/Button";
-
+import {Grid, Button} from "@mui/material";
 
 export default function CollectionNft(){
+
+    const handlerNewPage = () => {
+        
+    }
+
     return (
         <>
             <Head><title>Certus - Collections</title></Head>
@@ -17,8 +17,6 @@ export default function CollectionNft(){
                 container
                 spacing={0}
                 direction="column"
-                alignItems="center"
-                justifyContent="center"
                 sx={{
                     marginTop: 0,
                     width: '100%',
@@ -27,44 +25,15 @@ export default function CollectionNft(){
                 }}
             >
 
-                <div className="description-login font colorfont1 center-text" style={{color: '#11e3ab', marginBottom: 50}}>
-                    Transfer NFT
+                <div className="description-login font colorfont1" style={{color: '#11e3ab', marginTop: 40, marginLeft: 40}}>
+                    My Collection
                 </div>
-                <Box
-                    sx={{
-                        marginLeft: 'auto',
-                        marginRight: 'auto',
-                        width: 500,
-                        padding: 5,
-                        borderRadius: 10,
-                        backgroundColor: '#11e3ab',
-                    }}
-                >
-
-                    <div
-                        style={{
-                            height: '100%',
-                            display: 'flex',
-                            justifyContent: 'center',
-                            alignItems: 'center'
-                        }}
-                    >
-
-                        <Grid
-                            contairner
-                        >
-                            <Grid item xs={12}>
-                                <TextField fullWidth label="Wallet" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
-                            </Grid>
-
-                            <Grid item xs={12}>
-                                <Button style={{marginTop: 10, marginBottom: 10, backgroundColor:'#D9FCF3', color: '#11e3ab'}} variant="contained">Transfer</Button>
-                            </Grid>
-
-                        </Grid>
-                    </div>
-                </Box>
+                <div className="font" style={{color: '#041D3D', marginTop:50, marginLeft:110, size:12}}> To checkout your collection of nfts, please visit 
+                    <Button style={{marginLeft:10, backgroundColor:'#D9FCF3', color: '#11e3ab'}} variant="contained" href="https://certus.vercel.app/" target="_blank">Certus
+                    </Button>
+                </div>
             </Grid>
+            
         </>
     )
 }
