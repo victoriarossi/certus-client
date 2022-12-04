@@ -1,13 +1,10 @@
 import Head from "next/head";
 import AppAppBar from "./AppAppBar";
-import { styled } from '@mui/material/styles';
 import * as React from "react";
 import Box from "@mui/material/Box";
-import Paper from '@mui/material/Paper';
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import {useRouter} from "next/router";
-
 
 
 function GridItem(theme){
@@ -18,8 +15,43 @@ function GridItem(theme){
     )
 }
 
+// async function loginHandler(){
+//     const res = await fetch("certusapi.brazilsouth.cloudapp.azure.com:80/login", {
+//         method: 'POST',
+//         body: JSON.stringify(
+//             {
+//                 "email":"lautihernando6@gmail.com",
+//                 "password":"laucha"
+//             }
+//         )
+//     })
+//     return await res.json().token
+// }
+
 function _LogIn(){
     const router = useRouter();
+
+    let token;
+    token = "nada"
+
+    const loginHandler = async () => {
+        const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
+            mode: 'no-cors',
+            method: "post",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(
+                {
+                    "email":"lautihernando6@gmail.com",
+                    "password":"LautaroHernando1"
+                }
+            )
+        // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
+        }).then((response) => console.log("response dentro del .then" + response)).catch((err) => console.log("error msg:" + err.message))
+        console.log("res: " + res)
+    }
+
     return (
         <>
             <Head><title>Certus - Log In</title></Head>
@@ -76,10 +108,16 @@ function _LogIn(){
                                 <Button
                                     style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}}
                                     variant="contained"
-                                    onClick={() => router.push("/Dashboard")}
+                                    // onClick={() => router.push("/Dashboard")}
+                                    onClick={() => loginHandler()}
                                 >
                                     Log In
                                 </Button>
+                            </Grid>
+                            <Grid item xs={12}>
+                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
+                                    {token}
+                                </div>
                             </Grid>
                             <Grid item xs={12}>
                                 <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
