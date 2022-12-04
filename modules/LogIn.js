@@ -7,32 +7,14 @@ import Button from "@mui/material/Button";
 import {useRouter} from "next/router";
 
 
-function GridItem(theme){
-    return(
-        <>
-
-        </>
-    )
-}
-
-// async function loginHandler(){
-//     const res = await fetch("certusapi.brazilsouth.cloudapp.azure.com:80/login", {
-//         method: 'POST',
-//         body: JSON.stringify(
-//             {
-//                 "email":"lautihernando6@gmail.com",
-//                 "password":"laucha"
-//             }
-//         )
-//     })
-//     return await res.json().token
-// }
-
 function _LogIn(){
     const router = useRouter();
 
     let token;
     token = "nada"
+
+    let email = "";
+    let password = "";
 
     const loginHandler = async () => {
         const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
@@ -40,13 +22,12 @@ function _LogIn(){
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(
             {
-                    email:"lautihernando6@gmail.com",
-                    password:"laucha"
-                }
+                    email: email,
+                    password: password
+            }
             )
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
         }).then(async (response) => {
-            console.log("response dentro del .then " + await response);
             router.push("./Dashboard");
         }).catch(async (err) => console.log("error msg:" + await err.message))
         console.log("res: " + await res)
@@ -98,10 +79,14 @@ function _LogIn(){
                             container
                         >
                             <Grid item xs={12}>
-                                <TextField fullWidth label="user" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
+                                <TextField fullWidth label="email" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"
+                                           onChange={(t) => email = t.target.value }
+                                />
                             </Grid>
                             <Grid item xs={12}>
-                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"/>
+                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"
+                                           onChange={(t) => password = t.target.value}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 {/*<Button variant="outlined" style={, justifySelf: "center"}}>Log In</Button>*/}
