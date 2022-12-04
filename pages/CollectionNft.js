@@ -3,11 +3,6 @@ import DashboardAppBar from "../modules/DashboardAppBar";
 import {Grid, Button} from "@mui/material";
 
 export default function CollectionNft(){
-
-    const handlerNewPage = () => {
-        
-    }
-
     return (
         <>
             <Head><title>Certus - Collections</title></Head>
