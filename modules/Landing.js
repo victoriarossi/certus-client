@@ -2,9 +2,11 @@ import Head from "next/head";
 import AppAppBar from "./AppAppBar";
 import Presentation from "./Presentation";
 import Box from "@mui/material/Box";
-import {Grid, Typography} from "@mui/material";
+import {Grid, Stack, Typography} from "@mui/material";
 import Presentation2 from "./Presentacion2";
 import * as React from "react";
+import WineBarIcon from '@mui/icons-material/WineBar';
+import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
 
 function Landing() {
     return(
@@ -38,7 +40,7 @@ function Landing() {
                             }}
                                         align="center" marked="center"
                             >
-                                Claim product NFTs with your personal wallet or just your email.
+                                Claim product NFTs with just your email.
                             </Typography>
                         </Grid>
 
@@ -60,6 +62,37 @@ function Landing() {
                     </Grid>
 
                 </Box>
+                <Stack sx={{backgroundColor:'#11e3ab'}}>
+                    <Typography variant="h3"  sx={{color:'#11e3ab', borderRadius: 20, padding: 1,fontWeight: "bold",fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 50, backgroundColor: '#f3f6f7' }}
+                        align="center" marked="center"
+                    >  <WineBarIcon fontSize={"large"}/>
+                        Wine Industry </Typography>
+                    <Stack direction={"row"} sx={{ margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center"}}>
+                    <Typography sx={{fontSize: 20, fontFamily: "Roboto"}}> The world of wine is characteristic for its exclusive variety of fine goods. Sommeliers and other afficionates
+                        enjoy the experience that comes along with the tasting: finding the right wine and determining its origins and
+                        quality. Certus makes sure our customers can instantly know what they are purchasing, with the highest degree
+                        of authenticity certainty. Fake wines with fake label duplicates? Not a problem anymore. Take an NFT with your
+                        bottle and find out everything about it.
+                    </Typography>
+                        <img src="/assets/winery.jpg"  alt={""} width={460} style={{borderRadius: 50}}/>
+                    </Stack>
+                </Stack>
+
+                <Stack sx={{backgroundColor:'#11e3ab'}}>
+                    <Typography variant="h3"  sx={{color:'#11e3ab', borderRadius: 20, padding: 1,fontWeight: "bold",fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 50, backgroundColor: '#f3f6f7' }}
+                                align="center" marked="center"
+                    >  <SportsBasketballIcon fontSize={"large"}/>
+                         Apparel  </Typography>
+                    <Stack direction={"row"} sx={{ margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center"}}>
+                        <Typography sx={{fontSize: 20, fontFamily: "Roboto"}}> New generations bring new trends. The sneaker market is booming,
+                            but its very easy to find cheap knockoff, barely distinguishable from originals by the average consumer. Harming both
+                            brands and consumer's pockets, solving this problem is of the upmost importance. We are that solution. Expect an NFT from the
+                            original brand with your exclusive items, or take the risk of being a knockoff victim.
+
+                        </Typography>
+                        <img src="/assets/winery.jpg"  alt={""} width={460} style={{borderRadius: 50}}/>
+                    </Stack>
+                </Stack>
                 <Presentation2></Presentation2>
 
             </div>
