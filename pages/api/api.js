@@ -32,7 +32,7 @@ export function callApi(name, desc, bkgs, flrs, prodImg){
             method:"POST",
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization' : "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODZkNzVmNDBkNzQ3ZTg1N2NkZWY2ZSIsImlhdCI6MTY3MDE3MDI3NywiZXhwIjoxNjcwMjU2Njc3fQ.u1fMh_N3u75nwgJCnOZnz7VccOeAjZugmM1tWLphr24"
+                'Authorization' : "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzODZkNzVmNDBkNzQ3ZTg1N2NkZWY2ZSIsImlhdCI6MTY3MDI2NDU5MywiZXhwIjoxNjcwMzUwOTkzfQ.3EokwJ7zYC5UFf1zsWYwn4W-QPcMerKvktGU0_4V-f4\n"
             },
             body: JSON.stringify(info)
         }).then(res => res.json())

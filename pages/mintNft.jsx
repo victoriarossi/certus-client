@@ -48,7 +48,7 @@ class mintNft extends React.Component{
     backgroundDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            backgroundImages: [...this.state.backgroundImages, {img: this.state.base64Data, name: this.state.title}]
+            backgroundImages: [...this.state.backgroundImages, {image: this.state.base64Data, name: this.state.title}]
 
         })
     };
@@ -56,7 +56,7 @@ class mintNft extends React.Component{
     flavourDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            flavourImages: [...this.state.flavourImages,  {img: this.state.base64Data, name: this.state.title}]
+            flavourImages: [...this.state.flavourImages,  {image: this.state.base64Data, name: this.state.title}]
         })
     };
 
@@ -196,7 +196,7 @@ class mintNft extends React.Component{
                                                         {/*    alt={item.title}*/}
                                                         {/*    loading="lazy"*/}
                                                         {/*/>*/}
-                                                        <img src={`data:image;base64,${item.img}`} />
+                                                        <img src={`data:image;base64,${item.image}`} />
                                                         <ImageListItemBar
                                                             title={item.name}
                                                         />
@@ -241,7 +241,7 @@ class mintNft extends React.Component{
                                                             {/*    alt={item.title}*/}
                                                             {/*    loading="lazy"*/}
                                                             {/*/>*/}
-                                                            <img src={`data:image;base64,${item.img}`} />
+                                                            <img src={`data:image;base64,${item.image}`} />
                                                             <ImageListItemBar
                                                                 title={item.name}
                                                             />
