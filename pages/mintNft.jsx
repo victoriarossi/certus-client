@@ -17,7 +17,7 @@ class mintNft extends React.Component{
         this.state = {
             name: String,
             desc: String,
-            destination: String,
+            walletDestination: String,
             productImage: null,
             backgroundImages: [],
             flavourImages: [],
@@ -158,10 +158,10 @@ class mintNft extends React.Component{
                                     }  />
                                 </Grid>
                                 <Grid item xs={12}>
-                                    <h4 style={{color:'black'}}>Destination (Wallet)</h4>
-                                    <TextField id="Destination" variant="outlined" multiline onChange={
+                                    <h4 style={{color:'black'}}>Wallet (Wallet)</h4>
+                                    <TextField id="walletDestination" variant="outlined" multiline onChange={
                                         (e) => this.setState({
-                                            destination: e.target.value
+                                            walletDestination: e.target.value
                                         })
                                     }  />
                                 </Grid>
@@ -244,13 +244,6 @@ class mintNft extends React.Component{
                                                 this.state.flavourImages.map((item) =>
                                                     (
                                                         <ImageListItem key={item}>
-                                                            {/*<img*/}
-                                                            {/*    // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
-                                                            {/*    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
-                                                            {/*    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}*/}
-                                                            {/*    alt={item.title}*/}
-                                                            {/*    loading="lazy"*/}
-                                                            {/*/>*/}
                                                             <img src={`data:image;base64,${item.img}`} />
                                                             <ImageListItemBar
                                                                 title={item.name}
@@ -283,7 +276,7 @@ class mintNft extends React.Component{
                                 </Grid>
 
                                 <Grid item xs={12}>
-                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage)}
+                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage, this.state.walletDestination)}
                                     >Mint Nft
                                     </Button>
                                 </Grid>
