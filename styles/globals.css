@@ -34,6 +34,10 @@ a {
   color: #041D3D
 }
 
+.errorColor{
+  color: red;
+}
+
 .font {
   font-family: "Josefin Sans Regular", "Roboto", monospace;
 }

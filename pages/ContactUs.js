@@ -50,7 +50,7 @@ function ContactUs(){
                     >
 
                         <Grid
-                            contairner
+                            container
                         >
                             <Grid item xs={12}>
                                 <TextField fullWidth label="Business Name" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>

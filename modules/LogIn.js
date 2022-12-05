@@ -5,34 +5,18 @@ import Box from "@mui/material/Box";
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import {useRouter} from "next/router";
+import {useState} from "react";
+import Link from "@mui/material/Link";
 
-
-function GridItem(theme){
-    return(
-        <>
-
-        </>
-    )
-}
-
-// async function loginHandler(){
-//     const res = await fetch("certusapi.brazilsouth.cloudapp.azure.com:80/login", {
-//         method: 'POST',
-//         body: JSON.stringify(
-//             {
-//                 "email":"lautihernando6@gmail.com",
-//                 "password":"laucha"
-//             }
-//         )
-//     })
-//     return await res.json().token
-// }
 
 function _LogIn(){
     const router = useRouter();
 
-    let token;
-    token = "nada"
+    let [error, setError] = useState();
+
+
+    let email = "";
+    let password = "";
 
     const loginHandler = async () => {
         const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
@@ -40,12 +24,20 @@ function _LogIn(){
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(
             {
-                    email:"lautihernando6@gmail.com",
-                    password:"laucha"
-                }
+                    email: email,
+                    password: password
+            }
             )
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
-        }).then(async (response) => console.log("response dentro del .then" + await response)).catch(async (err) => console.log("error msg:" + await err.message))
+        }).then(async (response) => {
+            if(!response.ok)
+                setError("Invalid username or password");
+            else
+                router.push("./Dashboard");
+        }).catch(async (err) => {
+            console.log("error msg:" + await err.message)
+            setError("There was a connection error. Try again later.")
+        })
         console.log("res: " + await res)
     }
 
@@ -92,13 +84,22 @@ function _LogIn(){
                     >
 
                         <Grid
-                            contairner
+                            container
                         >
                             <Grid item xs={12}>
-                                <TextField fullWidth label="user" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"/>
+                                <div className="text-login font errorColor center-text" style={{marginTop: 10,color: '#041D3D'}}>
+                                    <p style={{color: "red"}}>{error}</p>
+                                </div>
                             </Grid>
                             <Grid item xs={12}>
-                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"/>
+                                <TextField fullWidth label="email" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"
+                                           onChange={(t) => email = t.target.value }
+                                />
+                            </Grid>
+                            <Grid item xs={12}>
+                                <TextField fullWidth label="password" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} type="password"
+                                           onChange={(t) => password = t.target.value}
+                                />
                             </Grid>
                             <Grid item xs={12}>
                                 {/*<Button variant="outlined" style={, justifySelf: "center"}}>Log In</Button>*/}
@@ -106,20 +107,19 @@ function _LogIn(){
                                     style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}}
                                     variant="contained"
                                     // onClick={() => router.push("/Dashboard")}
-                                    onClick={() => loginHandler()}
+                                    onClick={() => {
+                                        loginHandler()
+                                    }}
                                 >
                                     Log In
                                 </Button>
                             </Grid>
                             <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    {token}
-                                </div>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    Not have an account? Sign Up now
-                                </div>
+                                <Link href="/ContactUs">
+                                    <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}} >
+                                        Not have an account? Contact Us now
+                                    </div>
+                                </Link>
                             </Grid>
                         </Grid>
                     </div>

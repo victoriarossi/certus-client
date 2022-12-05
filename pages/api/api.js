@@ -14,15 +14,15 @@ import {useEffect} from "react";
 //     })
 // })
 
-export function callApi(){
+export function callApi(name, desc){
     const info =
     {
         targetWalletAddress: "0x8435B451bBB8B58b93BAf90b8f30Ae96AB003DD2",
         bkgs: [{image:"aaaaa",name:"back1"}],
         flrs:  [{image:"aaaaaa",name:"flr1"}],
         imageURL:"imageURL",
-        name: "ES LA PRUEBA DESDE EL FRONT",
-        description:"TEST",
+        name: name,
+        description:desc,
         brand: {image:"aaaaa",name:"brand"},
     }
 
