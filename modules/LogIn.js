@@ -5,13 +5,14 @@ import Box from "@mui/material/Box";
 import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import {useRouter} from "next/router";
+import {useState} from "react";
 
 
 function _LogIn(){
     const router = useRouter();
 
-    let token;
-    token = "nada"
+    let [error, setError] = useState();
+
 
     let email = "";
     let password = "";
@@ -28,8 +29,14 @@ function _LogIn(){
             )
         // }).then((response) => token = response.json().user.id).catch((err) => console.log(err.message))
         }).then(async (response) => {
-            router.push("./Dashboard");
-        }).catch(async (err) => console.log("error msg:" + await err.message))
+            if(!response.ok)
+                setError("Invalid username or password");
+            else
+                router.push("./Dashboard");
+        }).catch(async (err) => {
+            console.log("error msg:" + await err.message)
+            setError("There was a connection error. Try again later.")
+        })
         console.log("res: " + await res)
     }
 
@@ -79,6 +86,11 @@ function _LogIn(){
                             container
                         >
                             <Grid item xs={12}>
+                                <div className="text-login font errorColor center-text" style={{marginTop: 10,color: '#041D3D'}}>
+                                    <p style={{color: "red"}}>{error}</p>
+                                </div>
+                            </Grid>
+                            <Grid item xs={12}>
                                 <TextField fullWidth label="email" id="fullWidth" style={{width: '100%', marginTop: 10, marginBottom: 10}} className="textFieldColor"
                                            onChange={(t) => email = t.target.value }
                                 />
@@ -94,15 +106,12 @@ function _LogIn(){
                                     style={{marginTop: 10, marginBottom: 10, backgroundColor:'#11e3ab'}}
                                     variant="contained"
                                     // onClick={() => router.push("/Dashboard")}
-                                    onClick={() => loginHandler()}
+                                    onClick={() => {
+                                        loginHandler()
+                                    }}
                                 >
                                     Log In
                                 </Button>
-                            </Grid>
-                            <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    {token}
-                                </div>
                             </Grid>
                             <Grid item xs={12}>
                                 <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
