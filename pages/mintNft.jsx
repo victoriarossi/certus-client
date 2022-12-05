@@ -3,7 +3,7 @@ import * as React from "react";
 import Head from "next/head";
 import AppAppBar from "../modules/AppAppBar";
 import Box from "@mui/material/Box";
-import {Grid, ImageList, ImageListItem} from "@mui/material";
+import {Grid, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DashboardAppBar from "../modules/DashboardAppBar";
@@ -19,7 +19,8 @@ class mintNft extends React.Component{
             desc: String,
             backgroundImages: [],
             flavourImages: [],
-            base64Data: null
+            base64Data: null,
+            title: null
         }
     };
 
@@ -28,6 +29,7 @@ class mintNft extends React.Component{
         let binaryString = e.target.result;
         this.setState({
             base64Data: btoa(binaryString),
+            title: e.target.title
         });
     };
 
@@ -45,7 +47,7 @@ class mintNft extends React.Component{
     backgroundDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            backgroundImages: [...this.state.backgroundImages,  this.state.base64Data]
+            backgroundImages: [...this.state.backgroundImages, {img: this.state.base64Data, title: this.state.title}]
 
         })
     };
@@ -53,7 +55,7 @@ class mintNft extends React.Component{
     flavourDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            flavourImages: [...this.state.flavourImages,  this.state.base64Data]
+            flavourImages: [...this.state.flavourImages,  {img: this.state.base64Data, title: this.state.title}]
 
         })
     };
@@ -146,7 +148,7 @@ class mintNft extends React.Component{
 
                                 <Grid item xs={12}>
                                     <h4 style={{color:'black'}}>Background Images</h4>
-                                    <ImageList sx={{ width: 500, height: 200 }} cols={3} rowHeight={164}>
+                                    <ImageList sx={{ width: 500, height: 200, backgroundColor: '#D9FCF3', borderRadius: '20px'}} cols={3} rowHeight={164}>
                                         {
                                             this.state.backgroundImages.map((item) =>
                                                 (
@@ -157,7 +159,10 @@ class mintNft extends React.Component{
                                                         {/*    alt={item.title}*/}
                                                         {/*    loading="lazy"*/}
                                                         {/*/>*/}
-                                                        <img src={`data:image;base64,${item}`} />
+                                                        <img src={`data:image;base64,${item.img}`} />
+                                                        <ImageListItemBar
+                                                            title={item.title}
+                                                        />
                                                     </ImageListItem>
                                                 )
                                             )
@@ -187,24 +192,27 @@ class mintNft extends React.Component{
 
                                 <Grid item xs={12}>
                                     <h4 style={{color:'black'}}>Flavour Images</h4>
-                                    <ImageList sx={{ width: 500, height: 200 }} cols={3} rowHeight={164}>
-                                        {
-                                            this.state.flavourImages.map((item) =>
-                                                (
-                                                    <ImageListItem key={item}>
-                                                        {/*<img*/}
-                                                        {/*    // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
-                                                        {/*    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
-                                                        {/*    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}*/}
-                                                        {/*    alt={item.title}*/}
-                                                        {/*    loading="lazy"*/}
-                                                        {/*/>*/}
-                                                        <img src={`data:image;base64,${item}`} />
-                                                    </ImageListItem>
+                                        <ImageList sx={{ width: 500, height: 200, backgroundColor: '#D9FCF3', borderRadius: '20px'}} cols={3} rowHeight={164}>
+                                            {
+                                                this.state.flavourImages.map((item) =>
+                                                    (
+                                                        <ImageListItem key={item}>
+                                                            {/*<img*/}
+                                                            {/*    // src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
+                                                            {/*    src={`${item.img}?w=164&h=164&fit=crop&auto=format`}*/}
+                                                            {/*    srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}*/}
+                                                            {/*    alt={item.title}*/}
+                                                            {/*    loading="lazy"*/}
+                                                            {/*/>*/}
+                                                            <img src={`data:image;base64,${item.img}`} />
+                                                            <ImageListItemBar
+                                                                title={item.title}
+                                                            />
+                                                        </ImageListItem>
+                                                    )
                                                 )
-                                            )
-                                        }
-                                    </ImageList>
+                                            }
+                                        </ImageList>
                                 </Grid>
 
                                 <Grid item xs={12}>
