@@ -48,7 +48,7 @@ class mintNft extends React.Component{
     backgroundDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            backgroundImages: [...this.state.backgroundImages, {img: this.state.base64Data, title: this.state.title}]
+            backgroundImages: [...this.state.backgroundImages, {img: this.state.base64Data, name: this.state.title}]
 
         })
     };
@@ -56,7 +56,7 @@ class mintNft extends React.Component{
     flavourDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            flavourImages: [...this.state.flavourImages,  {img: this.state.base64Data, title: this.state.title}]
+            flavourImages: [...this.state.flavourImages,  {img: this.state.base64Data, name: this.state.title}]
         })
     };
 
@@ -198,7 +198,7 @@ class mintNft extends React.Component{
                                                         {/*/>*/}
                                                         <img src={`data:image;base64,${item.img}`} />
                                                         <ImageListItemBar
-                                                            title={item.title}
+                                                            title={item.name}
                                                         />
                                                     </ImageListItem>
                                                 )
@@ -243,7 +243,7 @@ class mintNft extends React.Component{
                                                             {/*/>*/}
                                                             <img src={`data:image;base64,${item.img}`} />
                                                             <ImageListItemBar
-                                                                title={item.title}
+                                                                title={item.name}
                                                             />
                                                         </ImageListItem>
                                                     )
@@ -273,7 +273,7 @@ class mintNft extends React.Component{
                                 </Grid>
 
                                 <Grid item xs={12}>
-                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(name, desc)}
+                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage)}
                                     >Mint Nft
                                     </Button>
                                 </Grid>
@@ -289,164 +289,4 @@ class mintNft extends React.Component{
 }
 
 export default mintNft;
-
-// export default function mintNft() {
-//
-//     const [name, setName] = useState('');
-//     const [desc, setDesc]= useState('');
-//
-//     const handleNameChange = event => {
-//         setName(event.target.value);
-//     }
-//
-//     const handleDescChange = event => {
-//         setDesc(event.target.value);
-//     }
-//
-//
-//     return (
-//         <>
-//             <Head><title>Certus - Mint Nft</title></Head>
-//             <DashboardAppBar class={AppAppBar}></DashboardAppBar>
-//             <Grid
-//                 position="fixed"
-//                 container
-//                 spacing={0}
-//                 direction="row"
-//                 alignItems="center"
-//                 justifyContent="center"
-//                 sx={{
-//                     marginTop: 0,
-//                     width: '100%',
-//                     height: '100%',
-//                     backgroundColor: 'white',
-//                 }}
-//             >
-//                 <Box
-//                     sx={{
-//                         marginTop: '100',
-//                         marginLeft: 0,
-//                         marginBottom:'100',
-//                         height: "100%",
-//                         backgroundColor: '#D9FCF3',
-//                     }}
-//                 >
-//                     <div
-//                         style={{
-//                             display: 'flex',
-//                             justifyContent: 'center',
-//                             alignItems: 'center',
-//                             height: '100%',
-//                             marginLeft: 60,
-//                             marginRight: 60
-//                         }}
-//                     >
-//                         <Grid spacing={2} >
-//                             <Grid item xs={12} color="black">
-//                                 <h2>NFT Information</h2>
-//                             </Grid>
-//                             <Grid item xs={12}>
-//                                 <h4 style={{color:'black'}}>Name</h4>
-//                                 <TextField id="name" variant="outlined" onChange={handleNameChange} value={name}/>
-//                             </Grid>
-//                             <Grid item xs={12}>
-//                                 <h4 style={{color:'black'}}>Description</h4>
-//                                 <TextField id="description" variant="outlined" multiline rows={4} onChange={handleDescChange} value={desc} />
-//                             </Grid>
-//                         </Grid>
-//                     </div>
-//                 </Box>
-//                 <Box
-//                     sx={{
-//                         marginTop: '100',
-//                         marginLeft: 'auto',
-//                         marginRight: 'auto',
-//                         marginBottom:'100',
-//                         width: 500,
-//                         borderRadius: 10,
-//                         backgroundColor: 'white',
-//                     }}
-//                 >
-//                     <div
-//                         style={{
-//                             display: 'flex',
-//                             justifyContent: 'center',
-//                             alignItems: 'center',
-//                             height: '100%',
-//                         }}
-//                     >
-//                         <Grid spacing={2} >
-//
-//                             <Grid item xs={12} color="black">
-//                                 <h2>NFT personalisation</h2>
-//                             </Grid>
-//
-//                             <Grid item xs={12}>
-//                                 <h4 style={{color:'black'}}>Background Images</h4>
-//                                 <ImageList sx={{ width: 500, height: 200 }} cols={3} rowHeight={164}>
-//                                     {
-//                                         backgroundImages.map((item) =>
-//                                             (
-//                                             <ImageListItem key={item.img}>
-//                                                 <img
-//                                                     src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-//                                                     srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-//                                                     alt={item.title}
-//                                                     loading="lazy"
-//                                                 />
-//                                             </ImageListItem>
-//                                             )
-//                                         )
-//                                     }
-//                                 </ImageList>
-//                             </Grid>
-//
-//                             <Grid item xs={12}>
-//                                 {/*<Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>*/}
-//                                 <ImageUpload images={backgroundImages}></ImageUpload>
-//                             </Grid>
-//
-//                             <Grid item xs={12}>
-//                                 <h4 style={{color:'black'}}>Flavour Images</h4>
-//                                 <ImageList sx={{ width: 500, height: 200 }} cols={3} rowHeight={164}>
-//                                     {
-//                                         flavourImages.map((item) =>
-//                                             (
-//                                                 <ImageListItem key={item.img}>
-//                                                     <img
-//                                                         src={`${item.img}?w=164&h=164&fit=crop&auto=format`}
-//                                                         srcSet={`${item.img}?w=164&h=164&fit=crop&auto=format&dpr=2 2x`}
-//                                                         alt={item.title}
-//                                                         loading="lazy"
-//                                                     />
-//                                                 </ImageListItem>
-//                                             )
-//                                         )
-//                                     }
-//                                 </ImageList>
-//                             </Grid>
-//
-//                             <Grid item xs={12}>
-//                                 {/*<Button style={{backgroundColor:'#11e3ab', marginTop: 20, marginBottom: 20}} variant="contained">Upload Image</Button>*/}
-//                                 <ImageUpload images={flavourImages}></ImageUpload>
-//                             </Grid>
-//
-//                             <Grid item xs={12}>
-//                                 <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(name, desc)}
-//                                 >Mint Nft
-//                                 </Button>
-//                             </Grid>
-//                         </Grid>
-//                     </div>
-//                 </Box>
-//
-//             </Grid>
-//
-//         </>
-//     )
-// }
-// let backgroundImages = [];
-//
-//
-// let flavourImages = [];
 
