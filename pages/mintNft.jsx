@@ -292,7 +292,6 @@ class mintNft extends React.Component{
                                         id="file"
                                         accept=".jpg, .jpeg, .png"
                                         // onChange={(e) => handler(e.target.value)}
-                                        ref={this.inputRef}
                                         onChange ={(e) => {
 
                                             this.onChangeBase64(e);
@@ -307,13 +306,15 @@ class mintNft extends React.Component{
                                 </Grid>
 
                                 <Grid item xs={12}>
-                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => {if (this.checkFields === true) {callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage, this.state.walletDestination).then(this.successHandler)} else {this.errorHandler()}}}
+                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => {if (this.checkFields()) {callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage, this.state.walletDestination).then(this.successHandler)} else {this.errorHandler()}}}
                                     >Mint Nft
                                     </Button>
                                 </Grid>
                             </Grid>
                         </div>
                     </Box>
+
+
 
                 </Grid>
                 <Snackbar open={this.state.errorOpen} autoHideDuration={6000} onClose={this.errorHandler}>
