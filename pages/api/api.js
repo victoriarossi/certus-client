@@ -14,10 +14,11 @@ import {useEffect} from "react";
 //     })
 // })
 
-export function callApi(name, desc, bkgs, flrs, prodImg){
+export function callApi(name, desc, bkgs, flrs, prodImg, targetWalletAddress){
     const info =
     {
-        targetWalletAddress: "0x3354aE289Ee94B9Ce1811AA5E827A2CE3a9DB335",
+        //targetWalletAddress: "0x3354aE289Ee94B9Ce1811AA5E827A2CE3a9DB335",
+        targetWalletAddress: targetWalletAddress,
         bkgs: bkgs,
         flrs:  flrs,
         imageURL:"",
