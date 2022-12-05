@@ -62,8 +62,6 @@ function Landing() {
                     </Grid>
 
                 </Box>
-                <Presentation2></Presentation2>
-
                 <Stack sx={{backgroundColor:'#11e3ab'}}>
                     <Typography variant="h3"  sx={{color:'#11e3ab', borderRadius: 20, padding: 1,fontWeight: "bold",fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 50, backgroundColor: '#f3f6f7' }}
                         align="center" marked="center"
@@ -84,7 +82,7 @@ function Landing() {
                     <Typography variant="h3"  sx={{color:'#11e3ab', borderRadius: 20, padding: 1,fontWeight: "bold",fontFamily: 'Josefin Sans', marginTop:10, marginLeft: 'auto', marginRight: 'auto', fontSize: 50, backgroundColor: '#f3f6f7' }}
                                 align="center" marked="center"
                     >  <SportsBasketballIcon fontSize={"large"}/>
-                        Sneakers </Typography>
+                         Apparel  </Typography>
                     <Stack direction={"row"} sx={{ margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center"}}>
                         <Typography sx={{fontSize: 20, fontFamily: "Roboto"}}> New generations bring new trends. The sneaker market is booming,
                             but its very easy to find cheap knockoff, barely distinguishable from originals by the average consumer. Harming both
@@ -95,6 +93,8 @@ function Landing() {
                         <img src="/assets/winery.jpg"  alt={""} width={460} style={{borderRadius: 50}}/>
                     </Stack>
                 </Stack>
+                <Presentation2></Presentation2>
+
             </div>
         </>
 
