@@ -14,16 +14,16 @@ import {useEffect} from "react";
 //     })
 // })
 
-export function callApi(name, desc){
+export function callApi(name, desc, bkgs, flrs, prodImg){
     const info =
     {
-        targetWalletAddress: "0x8435B451bBB8B58b93BAf90b8f30Ae96AB003DD2",
-        bkgs: [{image:"aaaaa",name:"back1"}],
-        flrs:  [{image:"aaaaaa",name:"flr1"}],
-        imageURL:"imageURL",
+        targetWalletAddress: "0x3354aE289Ee94B9Ce1811AA5E827A2CE3a9DB335",
+        bkgs: bkgs,
+        flrs:  flrs,
+        imageURL:"",
         name: name,
         description:desc,
-        brand: {image:"aaaaa",name:"brand"},
+        brand: {image:prodImg,name:"Adidas"},
     }
 
         console.log(JSON.stringify(info))
