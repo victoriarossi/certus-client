@@ -6,6 +6,7 @@ import {Grid, TextField} from "@mui/material";
 import Button from "@mui/material/Button";
 import {useRouter} from "next/router";
 import {useState} from "react";
+import Link from "@mui/material/Link";
 
 
 function _LogIn(){
@@ -114,9 +115,11 @@ function _LogIn(){
                                 </Button>
                             </Grid>
                             <Grid item xs={12}>
-                                <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}}>
-                                    Not have an account? Sign Up now
-                                </div>
+                                <Link href="/ContactUs">
+                                    <div className="text-login font colorfont1 center-text" style={{marginTop: 10,color: '#041D3D'}} >
+                                        Not have an account? Contact Us now
+                                    </div>
+                                </Link>
                             </Grid>
                         </Grid>
                     </div>
