@@ -7,13 +7,14 @@ import Presentation2 from "./Presentacion2";
 import * as React from "react";
 import WineBarIcon from '@mui/icons-material/WineBar';
 import SportsBasketballIcon from '@mui/icons-material/SportsBasketball';
+import Button from "@mui/material/Button";
 
 function Landing() {
     return(
         <>
             <Head><title>Certus</title></Head>
             <AppAppBar class={AppAppBar}></AppAppBar>
-            <div style={{backgoundColor: '#f3f6f7'}}>
+            <div style={{backgoundColor: '#f3f6f7',width:'100%'}}>
                 <Presentation></Presentation>
                 <Box
                     sx={{
@@ -42,6 +43,20 @@ function Landing() {
                             >
                                 Claim product NFTs with just your email.
                             </Typography>
+                            <Typography variant="h2" sx={{
+                                color: '#031D3D',
+                                fontFamily: 'Roboto',
+                                marginTop: 10,
+                                marginLeft: 15,
+                                fontSize: 50,
+                                alignItems: 'left'
+                            }}
+                                        align="center" marked="center"
+                            >
+                            Demo our product now  
+                            </Typography>
+                        <Button size="large" variant={"contained"} sx={{backgroundColor: '#031D3D',marginLeft: 35}} href="https://certus.vercel.app/">Try It Out</Button>
+
                         </Grid>
 
                         <Grid item xs={6}>
@@ -67,14 +82,14 @@ function Landing() {
                         align="center" marked="center"
                     >  <WineBarIcon fontSize={"large"}/>
                         Wine Industry </Typography>
-                    <Stack direction={"row"} sx={{ margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center"}}>
-                    <Typography sx={{fontSize: 20, fontFamily: "Roboto"}}> The world of wine is characteristic for its exclusive variety of fine goods. Sommeliers and other afficionates
+                    <Stack direction={"row"} sx={{backgroundColor:"#D9FCF3", margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center",borderRadius:10}}>
+                    <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5}}> The world of wine is characteristic for its exclusive variety of fine goods. Sommeliers and other afficionates
                         enjoy the experience that comes along with the tasting: finding the right wine and determining its origins and
                         quality. Certus makes sure our customers can instantly know what they are purchasing, with the highest degree
                         of authenticity certainty. Fake wines with fake label duplicates? Not a problem anymore. Take an NFT with your
                         bottle and find out everything about it.
                     </Typography>
-                        <img src="/assets/winery.jpg"  alt={""} width={460} style={{borderRadius: 50}}/>
+                        <img src="/assets/wine.png"  alt={""} width={460} style={{borderRadius: 10}}/>
                     </Stack>
                 </Stack>
 
@@ -83,17 +98,17 @@ function Landing() {
                                 align="center" marked="center"
                     >  <SportsBasketballIcon fontSize={"large"}/>
                          Apparel  </Typography>
-                    <Stack direction={"row"} sx={{ margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center"}}>
-                        <Typography sx={{fontSize: 20, fontFamily: "Roboto"}}> New generations bring new trends. The sneaker market is booming,
+                    <Stack direction={"row"} sx={{ backgroundColor:"#D9FCF3",margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center",borderRadius:10}}>
+                        <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5}}> New generations bring new trends. The sneaker market is booming,
                             but its very easy to find cheap knockoff, barely distinguishable from originals by the average consumer. Harming both
                             brands and consumer's pockets, solving this problem is of the upmost importance. We are that solution. Expect an NFT from the
                             original brand with your exclusive items, or take the risk of being a knockoff victim.
 
                         </Typography>
-                        <img src="/assets/winery.jpg"  alt={""} width={460} style={{borderRadius: 50}}/>
+                        <img src="/assets/zapas.png"  alt={""} width={460} style={{borderRadius: 10}}/>
                     </Stack>
+                    
                 </Stack>
-                <Presentation2></Presentation2>
 
             </div>
         </>
