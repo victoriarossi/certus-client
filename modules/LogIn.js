@@ -33,7 +33,7 @@ function _LogIn(){
             if(!response.ok)
                 setError("Invalid username or password");
             else
-                router.push("./Dashboard");
+                router.push("./mintNft");
         }).catch(async (err) => {
             console.log("error msg:" + await err.message)
             setError("There was a connection error. Try again later.")
