@@ -19,7 +19,7 @@ function _LogIn(){
     let password = "";
 
     const loginHandler = async () => {
-        const res = await fetch("https://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
+        const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
             method: "post",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(
