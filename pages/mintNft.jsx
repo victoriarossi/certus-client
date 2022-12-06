@@ -3,28 +3,55 @@ import * as React from "react";
 import Head from "next/head";
 import AppAppBar from "../modules/AppAppBar";
 import Box from "@mui/material/Box";
-import {Grid, ImageList, ImageListItem, ImageListItemBar} from "@mui/material";
+import {Alert, Grid, ImageList, ImageListItem, ImageListItemBar, Snackbar} from "@mui/material";
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 import DashboardAppBar from "../modules/DashboardAppBar";
 import {useState} from "react";
 import {callApi} from "./api/api.js"
 import {btoa} from "next/dist/compiled/@edge-runtime/primitives/encoding";
+import {useRouter} from "next/router";
+import {router} from "next/client";
+
+
+
 
 class mintNft extends React.Component{
     constructor(props) {
         super(props);
         this.state = {
-            name: String,
-            desc: String,
-            walletDestination: String,
+            name: "",
+            desc: "",
+            walletDestination: "",
             productImage: null,
             backgroundImages: [],
             flavourImages: [],
             base64Data: null,
-            title: null
+            title: null,
+            errorOpen: false,
+            successOpen: false
         }
     };
+
+
+    checkFields = () => {
+        if (this.state.name === "" || this.state.walletDestination === "" || this.state.desc === "" || this.state.backgroundImages === [] || this.state.flavourImages === [] || this.state.productImage === null || this.state.backgroundImages.length !== this.state.flavourImages.length){
+            return false
+        }
+        return true
+    }
+
+    errorHandler = () => {
+        this.setState({
+            errorOpen: !this.state.errorOpen
+        })
+    };
+
+    successHandler = () => {
+        this.setState({
+            successOpen: !this.state.successOpen
+        })
+    }
 
 
     _handleReaderLoaded = (e) => {
@@ -32,13 +59,16 @@ class mintNft extends React.Component{
         let binaryString = e.target.result;
         this.setState({
             base64Data: btoa(binaryString),
-            title: e.target.title
         });
     };
 
     onChangeBase64 = (e) => {
 
         let file = e.target.files[0];
+
+        this.setState({
+            title: e.target.files[0].name
+        })
 
         if (file) {
             const reader = new FileReader();
@@ -50,7 +80,7 @@ class mintNft extends React.Component{
     backgroundDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            backgroundImages: [...this.state.backgroundImages, {img: this.state.base64Data, name: this.state.title}]
+            backgroundImages: [...this.state.backgroundImages, {image: this.state.base64Data, name: this.state.title}]
 
         })
     };
@@ -58,7 +88,7 @@ class mintNft extends React.Component{
     flavourDelay = () => {
         console.log(this.state.base64Data)
         this.setState({
-            flavourImages: [...this.state.flavourImages,  {img: this.state.base64Data, name: this.state.title}]
+            flavourImages: [...this.state.flavourImages,  {image: this.state.base64Data, name: this.state.title}]
         })
     };
 
@@ -206,7 +236,7 @@ class mintNft extends React.Component{
                                                         {/*    alt={item.title}*/}
                                                         {/*    loading="lazy"*/}
                                                         {/*/>*/}
-                                                        <img src={`data:image;base64,${item.img}`} />
+                                                        <img src={`data:image;base64,${item.image}`} />
                                                         <ImageListItemBar
                                                             title={item.name}
                                                         />
@@ -244,7 +274,7 @@ class mintNft extends React.Component{
                                                 this.state.flavourImages.map((item) =>
                                                     (
                                                         <ImageListItem key={item}>
-                                                            <img src={`data:image;base64,${item.img}`} />
+                                                            <img src={`data:image;base64,${item.image}`} />
                                                             <ImageListItemBar
                                                                 title={item.name}
                                                             />
@@ -276,7 +306,7 @@ class mintNft extends React.Component{
                                 </Grid>
 
                                 <Grid item xs={12}>
-                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage, this.state.walletDestination)}
+                                    <Button style={{backgroundColor:'#11e3ab', color:'black', marginTop:30}} onClick={() => {if (this.checkFields()) {callApi(this.state.name, this.state.desc, this.state.backgroundImages, this.state.flavourImages, this.state.productImage, this.state.walletDestination).then(this.successHandler)} else {this.errorHandler()}}}
                                     >Mint Nft
                                     </Button>
                                 </Grid>
@@ -284,7 +314,19 @@ class mintNft extends React.Component{
                         </div>
                     </Box>
 
+
+
                 </Grid>
+                <Snackbar open={this.state.errorOpen} autoHideDuration={6000} onClose={this.errorHandler}>
+                    <Alert severity="error" sx={{ width: '100%' }}>
+                        Couldn't mint nft
+                    </Alert>
+                </Snackbar>
+                <Snackbar open={this.state.successOpen} autoHideDuration={6000} onClose={this.successHandler}>
+                    <Alert severity="success" sx={{ width: '100%' }}>
+                        Success! Nft minted
+                    </Alert>
+                </Snackbar>
             </>
         );
     }
