@@ -83,7 +83,7 @@ function Landing() {
                     >  <WineBarIcon fontSize={"large"}/>
                         Wine Industry </Typography>
                     <Stack direction={"row"} sx={{backgroundColor:"#D9FCF3", margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center",borderRadius:10}}>
-                    <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5}}> The world of wine is characteristic for its exclusive variety of fine goods. Sommeliers and other afficionates
+                    <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5, color:"black",textAlign:"justify", textJustify:"inter-word",lineHeight:2}}> The world of wine is characteristic for its exclusive variety of fine goods. Sommeliers and other afficionates
                         enjoy the experience that comes along with the tasting: finding the right wine and determining its origins and
                         quality. Certus makes sure our customers can instantly know what they are purchasing, with the highest degree
                         of authenticity certainty. Fake wines with fake label duplicates? Not a problem anymore. Take an NFT with your
@@ -99,7 +99,7 @@ function Landing() {
                     >  <SportsBasketballIcon fontSize={"large"}/>
                          Apparel  </Typography>
                     <Stack direction={"row"} sx={{ backgroundColor:"#D9FCF3",margin: 5, marginLeft: 20, marginRight: 20, verticalAlign: "center",borderRadius:10}}>
-                        <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5}}> New generations bring new trends. The sneaker market is booming,
+                        <Typography sx={{fontSize: 20, fontFamily: "Roboto",margin:5,color:"black", textAlign:"justify", textJustify:"inter-word", lineHeight:2}}> New generations bring new trends. The sneaker market is booming,
                             but its very easy to find cheap knockoff, barely distinguishable from originals by the average consumer. Harming both
                             brands and consumer's pockets, solving this problem is of the upmost importance. We are that solution. Expect an NFT from the
                             original brand with your exclusive items, or take the risk of being a knockoff victim.
