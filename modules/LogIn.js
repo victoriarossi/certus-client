@@ -19,7 +19,7 @@ function _LogIn(){
     let password = "";
 
     const loginHandler = async () => {
-        const res = await fetch("https://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
+        const res = await fetch("http://certusapi.brazilsouth.cloudapp.azure.com:80/login", {
             method: "post",
             headers: {'Content-Type': 'application/json'},
             body: JSON.stringify(
@@ -33,7 +33,7 @@ function _LogIn(){
             if(!response.ok)
                 setError("Invalid username or password");
             else
-                router.push("./Dashboard");
+                router.push("./mintNft");
         }).catch(async (err) => {
             console.log("error msg:" + await err.message)
             setError("There was a connection error. Try again later.")

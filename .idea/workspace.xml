@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f5cc614b-4089-487d-8d4e-669ef3cbc587" name="Changes" comment="https" />
+    <list default="true" id="f5cc614b-4089-487d-8d4e-669ef3cbc587" name="Changes" comment="..">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/LogIn.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,6 +72,7 @@
       <workItem from="1670006526969" duration="7023000" />
       <workItem from="1670029555768" duration="38011000" />
       <workItem from="1670187462524" duration="26293000" />
+      <workItem from="1670288557705" duration="1165000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1666382675486</created>
@@ -273,7 +277,14 @@
       <option name="project" value="LOCAL" />
       <updated>1670288461551</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="..">
+      <created>1670288608440</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1670288608440</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -314,6 +325,7 @@
     <MESSAGE value="Bug fix" />
     <MESSAGE value="Wallet text field" />
     <MESSAGE value="https" />
-    <option name="LAST_COMMIT_MESSAGE" value="https" />
+    <MESSAGE value=".." />
+    <option name="LAST_COMMIT_MESSAGE" value=".." />
   </component>
 </project>
