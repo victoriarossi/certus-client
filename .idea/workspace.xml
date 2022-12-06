@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f5cc614b-4089-487d-8d4e-669ef3cbc587" name="Changes" comment="https" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2GRhN7necYBjvXUzosjBxUC3q47" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Project.color&quot;: &quot;545615&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;javascript.nodejs.core.library.configured.version&quot;: &quot;16.17.0&quot;,
+    &quot;javascript.nodejs.core.library.typings.version&quot;: &quot;16.18.4&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/marti/WebstormProjects/certus-client/public/assets&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2022.2.1\\plugins\\JavaScriptLanguage\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\WebstormProjects\certus-client\public\assets" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\marti\WebstormProjects\certus-client\public\assets" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f5cc614b-4089-487d-8d4e-669ef3cbc587" name="Changes" comment="" />
+      <created>1666357260504</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1666357260504</updated>
+      <workItem from="1666357261868" duration="5423000" />
+      <workItem from="1666393717139" duration="2332000" />
+      <workItem from="1666565550183" duration="859000" />
+      <workItem from="1666632188753" duration="2655000" />
+      <workItem from="1666649569480" duration="10149000" />
+      <workItem from="1668431804664" duration="22000" />
+      <workItem from="1669746458763" duration="15000" />
+      <workItem from="1669746493245" duration="598000" />
+      <workItem from="1669915007481" duration="12171000" />
+      <workItem from="1670006526969" duration="7023000" />
+      <workItem from="1670029555768" duration="38011000" />
+      <workItem from="1670187462524" duration="26293000" />
+    </task>
+    <task id="LOCAL-00001" summary="Minor changes">
+      <created>1666382675486</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1666382675486</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Changes">
+      <created>1666395931363</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1666395931363</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Minor changes">
+      <created>1666634413010</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1666634413010</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Many changes">
+      <created>1666658749538</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1666658749538</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Minor changes">
+      <created>1666658881714</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1666658881714</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Minor changes">
+      <created>1666661929119</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1666661929119</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Working Login">
+      <created>1669926323966</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669926323966</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Working Login">
+      <created>1669945696315</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669945696315</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Working Login">
+      <created>1670007388844</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1670007388844</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Routing">
+      <created>1670012167985</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1670012167985</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Intento de dashboard">
+      <created>1670033355694</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1670033355694</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Dashboard routing and pages">
+      <created>1670086894785</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1670086894785</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Working on dashboard">
+      <created>1670094028401</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1670094028401</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Multiple changes: transfer NFT, mint NFT and more (only UI)">
+      <created>1670119703918</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1670119703918</updated>
+    </task>
+    <task id="LOCAL-00015" summary="base64 image">
+      <created>1670164905512</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1670164905512</updated>
+    </task>
+    <task id="LOCAL-00016" summary="login api on progress">
+      <created>1670171072981</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1670171072981</updated>
+    </task>
+    <task id="LOCAL-00017" summary="login api on progress">
+      <created>1670176238238</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1670176238238</updated>
+    </task>
+    <task id="LOCAL-00018" summary="login api working. TODO: save on localstorage">
+      <created>1670179994359</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1670179994359</updated>
+    </task>
+    <task id="LOCAL-00019" summary="images half way">
+      <created>1670193400871</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1670193400871</updated>
+    </task>
+    <task id="LOCAL-00020" summary="images seems to be working">
+      <created>1670197104583</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1670197104583</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Code cleanning">
+      <created>1670197263678</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1670197263678</updated>
+    </task>
+    <task id="LOCAL-00022" summary="TODO -&gt; Photo name">
+      <created>1670200956982</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1670200956982</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Login error handling DONE">
+      <created>1670212464089</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1670212464089</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Login contact us">
+      <created>1670212772268</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1670212772268</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Product image">
+      <created>1670219469669</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1670219469669</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Destination wallet textfield">
+      <created>1670262885504</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1670262885504</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Bug fix">
+      <created>1670263278756</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1670263278756</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Wallet text field">
+      <created>1670265177406</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1670265177406</updated>
+    </task>
+    <task id="LOCAL-00029" summary="https">
+      <created>1670288461551</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1670288461551</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changes" />
+    <MESSAGE value="Many changes" />
+    <MESSAGE value="Minor changes" />
+    <MESSAGE value="Working Login" />
+    <MESSAGE value="Routing" />
+    <MESSAGE value="Intento de dashboard" />
+    <MESSAGE value="Dashboard routing and pages" />
+    <MESSAGE value="Working on dashboard" />
+    <MESSAGE value="Multiple changes: transfer NFT, mint NFT and more (only UI)" />
+    <MESSAGE value="base64 image" />
+    <MESSAGE value="login api on progress" />
+    <MESSAGE value="login api working. TODO: save on localstorage" />
+    <MESSAGE value="images half way" />
+    <MESSAGE value="images seems to be working" />
+    <MESSAGE value="Code cleanning" />
+    <MESSAGE value="TODO -&gt; Photo name" />
+    <MESSAGE value="Login error handling DONE" />
+    <MESSAGE value="Login contact us" />
+    <MESSAGE value="Product image" />
+    <MESSAGE value="Destination wallet textfield" />
+    <MESSAGE value="Bug fix" />
+    <MESSAGE value="Wallet text field" />
+    <MESSAGE value="https" />
+    <option name="LAST_COMMIT_MESSAGE" value="https" />
+  </component>
+</project>
