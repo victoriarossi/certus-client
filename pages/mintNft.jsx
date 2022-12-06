@@ -11,7 +11,7 @@ import {useState} from "react";
 import {callApi} from "./api/api.js"
 import {btoa} from "next/dist/compiled/@edge-runtime/primitives/encoding";
 import {useRouter} from "next/router";
-import {router} from "next/client";
+import { ethers } from "ethers";
 
 
 
@@ -35,7 +35,7 @@ class mintNft extends React.Component{
 
 
     checkFields = () => {
-        if (this.state.name === "" || this.state.walletDestination === "" || this.state.desc === "" || this.state.backgroundImages === [] || this.state.flavourImages === [] || this.state.productImage === null || this.state.backgroundImages.length !== this.state.flavourImages.length){
+        if (this.state.name === "" || this.state.walletDestination === "" || this.state.desc === "" || this.state.backgroundImages === [] || this.state.flavourImages === [] || this.state.productImage === null || this.state.backgroundImages.length !== this.state.flavourImages.length || !ethers.utils.isAddress(this.state.walletDestination)){
             return false
         }
         return true
