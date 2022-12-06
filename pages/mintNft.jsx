@@ -319,7 +319,7 @@ class mintNft extends React.Component{
                 </Grid>
                 <Snackbar open={this.state.errorOpen} autoHideDuration={6000} onClose={this.errorHandler}>
                     <Alert severity="error" sx={{ width: '100%' }}>
-                        Couldn't mint nft
+                        Couldn`&apos;`t mint nft
                     </Alert>
                 </Snackbar>
                 <Snackbar open={this.state.successOpen} autoHideDuration={6000} onClose={this.successHandler}>
