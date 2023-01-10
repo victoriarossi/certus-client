@@ -121,7 +121,7 @@ async function loadContract(){
 
                 </div>
             </Popup>
-                <div className="description-login font colorfont1 center-text" style={{color: '#11e3ab', marginBottom: 50}}>
+                <div className="description-login font colorfont1 center-text" style={{color: '#11e3ab', marginTop: 200}}>
                     Transfer NFT
                 </div>
                 <Box

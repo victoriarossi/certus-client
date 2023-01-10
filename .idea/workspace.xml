@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f5cc614b-4089-487d-8d4e-669ef3cbc587" name="Changes" comment="..">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_04_12_2022_17_54_[Changes]/shelved.patch" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/modules/LogIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/LogIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/modules/DashboardAppBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/modules/DashboardAppBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/CollectionNft.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/CollectionNft.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/TransferNft.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/TransferNft.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/api/api.js" beforeDir="false" afterPath="$PROJECT_DIR$/pages/api/api.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,6 +77,9 @@
       <workItem from="1670029555768" duration="38011000" />
       <workItem from="1670187462524" duration="26293000" />
       <workItem from="1670288557705" duration="1165000" />
+      <workItem from="1670339614262" duration="3693000" />
+      <workItem from="1670356634324" duration="3140000" />
+      <workItem from="1673309951161" duration="32000" />
     </task>
     <task id="LOCAL-00001" summary="Minor changes">
       <created>1666382675486</created>

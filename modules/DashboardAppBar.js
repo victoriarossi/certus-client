@@ -28,7 +28,7 @@ export default function DashboardAppBar(selected){
                         variant="h6"
                         underline="none"
                         color="inherit"
-                        href="/Dashboard"
+                        href="/mintNft"
                         sx={{ fontSize: 65, fontFamily: 'Josefin Sans', fontWeight: '900'  }}
                     >
                         <img src="/assets/4.png" style={{height: 80, marginTop: 30}} alt="Certus Logo"/>
@@ -37,9 +37,7 @@ export default function DashboardAppBar(selected){
 
                         <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/mintNft")}>Mint</Button>
 
-                        <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/CollectionNft")}>NFT Collections</Button>
-
-                        <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/TransferNft")}>Transfer NFT</Button>
+                        <Button variant="text" sx={{color: 'white'}} color="success" onClick={() => router.push("/CollectionNft")}>Transfer NFT</Button>
 
                         <Button variant="text" sx={{color: 'white'}} onClick={() => router.push("/")}>Log Out</Button>
 
